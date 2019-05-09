@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/labstack/gommon/log"
+	//"github.com/labstack/gommon/log"
 
+	"log"
 	//_ "github.com/lib/pq"
 	"net/http"
 )
@@ -63,9 +64,9 @@ import (
 //	result = result
 //}
 
-func main(){
+func main() {
 	fmt.Println("Go Docker Tutorial")
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Println(w, "Hello world")
 	})
 
