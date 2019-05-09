@@ -44,7 +44,7 @@ func main() {
 	app := iris.New()
 	app.Post("/", addWord)
 
-	err = app.Run(iris.Addr("localhost:8000"))
+	err = app.Run(iris.Addr("localhost:8080"))
 
 	if err != nil {
 		log.Error("error starting server: %v\n", err)
