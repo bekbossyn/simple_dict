@@ -67,7 +67,7 @@ import (
 func main() {
 	fmt.Println("Go Docker Tutorial")
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Println(w, "<h1>Hello world</h1>")
+		fmt.Fprintf(w, "Hello world")
 	})
 
 	log.Fatal(http.ListenAndServe(":8081", nil))
