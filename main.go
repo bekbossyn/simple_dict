@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"github.com/labstack/gommon/log"
+
 	//_ "github.com/lib/pq"
 	"net/http"
 )
@@ -66,4 +68,6 @@ func main(){
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
 		fmt.Println(w, "Hello world")
 	})
+
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
